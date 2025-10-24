@@ -64,5 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 cityAdapter.clear();
             }
         });
+
+
     }
 }
