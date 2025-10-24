@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ShowActivity">
+    tools:context=".ShowActivity"
+    android:paddingTop="20dp">
 
     <TextView
         android:id="@+id/text_city_name"
@@ -21,9 +22,10 @@
 
     <Button
         android:id="@+id/button_back"
-        android:layout_width="72dp"
-        android:layout_height="36dp"
+        android:layout_width="80dp"
+        android:layout_height="55dp"
         android:text="BACK"
+        android:textSize="10sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 

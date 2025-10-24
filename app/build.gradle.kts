@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace = "com.example.androiduitesting"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.androiduitesting"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 

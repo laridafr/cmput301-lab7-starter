@@ -1,9 +1,12 @@
 package com.example.androiduitesting;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.WindowCompat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        WindowCompat.setDecorFitsSystemWindows(getWindow(), true);
 
         nameField = findViewById(R.id.field_nameEntry);
         newName  = findViewById(R.id.editText_name);
@@ -64,6 +69,15 @@ public class MainActivity extends AppCompatActivity {
                 cityAdapter.clear();
             }
         });
+        cityList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String name = cityAdapter.getItem(position);
+                Intent i = new Intent(MainActivity.this, ShowActivity.class);
+                i.putExtra("city_name", name);
+                startActivity(i);
+            }
+        });
+
 
 
     }
